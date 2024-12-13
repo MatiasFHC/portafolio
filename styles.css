@@ -578,3 +578,95 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Estilos para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 10px;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        top: 10px;
+        right: 10px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+
+    .scroll-indicator {
+        font-size: 36px;
+    }
+
+    .habilidades-container, .habilidades-blandas-container, .certificados-container {
+        grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+    }
+
+    .proyectos-container {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    .proyecto, .certificados {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    /* Estilos de las barras de progreso */
+    .barra progress {
+        width: 100%; /* Asegura que las barras de progreso ocupen el 100% */
+    }
+
+    /* Ajustar el tamaño de las imágenes en los proyectos */
+    .proyecto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Estilo para las habilidades blandas */
+    .habilidad-blanda img {
+        max-height: 150px; /* Limitar la altura de las imágenes */
+    }
+
+    /* Hacer que los botones de GitHub en los proyectos se ajusten bien */
+    .github-container {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    header {
+        padding: 40px 20px;
+    }
+
+    .habilidades-container, .habilidades-blandas-container, .certificados-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .proyectos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proyecto, .certificados {
+        padding: 30px;
+        max-width: 90%;
+    }
+}
