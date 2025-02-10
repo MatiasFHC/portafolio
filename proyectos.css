@@ -1,0 +1,205 @@
+/* Estilo global */
+body {
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+}
+
+/* Botón "Volver" */
+header .volver {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: #00ff6a;
+    color: #121212;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .volver:hover {
+    background-color: #00d164;
+}
+
+/*Boton a github*/
+header .btn-github{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background-color: #00ff6a;
+    color: #121212;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .btn-github:hover {
+    background-color: #00d164;
+}
+
+/* Encabezado */
+header {
+    background-color: #1e1e2f;
+    text-align: center;
+    padding: 50px;
+    border-bottom: 5px solid #00ff6a;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #00ff6a;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin: auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Contenedor de las cards */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Estilo de las cards */
+.card {
+    flex: 1;
+    background-color: #1e1e2f;
+    border: 1px solid #00ff6a;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #00ff6a;
+    text-align: center;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    background-color: #28283c;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+/* Estilo de las imágenes */
+.text-imagen{
+    text-align: center;
+    color:#00ff6a;
+    font-size: 2.4rem;
+}
+.imagenes-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+    gap: 50px; /* Espacio entre las imágenes */
+    padding: 20px;
+    max-width: 1600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.imagen {
+    text-align: center;
+    background-color: #1e1e2f;
+    border: 1px solid #00ff6a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.imagen img {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    border-radius: 10px;
+}
+
+.imagen p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #f5f5f5;
+}
+.imagen:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+@media (max-width: 1024px) {
+    /* Para pantallas más pequeñas como tabletas o pantallas de ancho mediano */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+        width: 90%; /* Aumenta el tamaño de las cards para que se ajusten mejor */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Para pantallas de dispositivos móviles */
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    .cards {
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .text-imagen {
+        font-size: 2rem;
+    }
+
+    .imagenes-contenedor {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para móviles */
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Para pantallas con menos de 1024px de ancho */
+    .imagenes-contenedor {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Para móviles */
+    .imagenes-contenedor {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
